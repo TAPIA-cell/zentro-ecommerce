@@ -1,3 +1,4 @@
+import React from "react";                 // ⬅️ ESTO ES LO QUE FALTABA
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/organisms/Navbar";
 import FooterInfo from "./components/molecules/FooterInfo";
@@ -11,7 +12,7 @@ import Blogs from "./pages/Blogs";
 import BlogDetalle from "./pages/BlogsDetalle";
 import Contacto from "./pages/Contacto";
 import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout"; // ✅ NUEVO
+import Checkout from "./pages/Checkout";
 import Login from "./pages/Login";
 import Register from "./pages/Registro";
 import DetalleProducto from "./pages/DetalleProducto";
@@ -21,7 +22,7 @@ import AdminHome from "./pages/AdminHome";
 import AdminUsuarios from "./pages/AdminUsuarios";
 import AdminProductos from "./pages/AdminProductos";
 import AdminBlogs from "./pages/AdminBlogs";
-import AdminVentas from "./pages/AdminVentas"; // ✅ Nuevo import
+import AdminVentas from "./pages/AdminVentas";
 
 function App() {
   return (
@@ -38,11 +39,11 @@ function App() {
           <Route path="/blogs/:id" element={<BlogDetalle />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/carrito" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} /> {/* ✅ NUEVA RUTA */}
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Register />} />
 
-          {/* 🔐 Rutas protegidas para administrador */}
+          {/* 🔐 Rutas protegidas */}
           <Route
             path="/admin"
             element={
